@@ -10,17 +10,23 @@
   grid-template-rows: repeat(12, 1fr);
   min-width: 320px;
   height: 100vh;
-  border-radius: 10px;
+}
+
+body {
+  background-color: #0b131e;
 }
 
 .navigation-menu {
-  max-width: 84px;
-  height: 96vh;
+  min-width: 84px;
+
   margin-top: 15px;
   background-color: #202c3c;
   grid-column: 1/2;
-  grid-row: 1/-1;
-  border-radius: inherit;
+  grid-row: 1/13;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .city-overview,
@@ -28,8 +34,9 @@
 .seven-day-forcast,
 .today-forcast,
 .air-conditions {
-  width: 100%; /* Keep container width at 100% for mobile */
-  margin: 15px 0; /* Adjust margin for spacing between elements */
+  width: 100%;
+  margin: 15px 0;
+  border-radius: 15px;
 }
 
 .city-overview {
@@ -37,23 +44,20 @@
   background-color: #0b131e;
   grid-column: 2/10;
   grid-row: 2/4;
-  border-radius: inherit;
 }
 
 .search-bar {
   min-height: 42px;
   background-color: #202c3c;
-  grid-column: 2/10;
+  grid-column: 2/8;
   grid-row: 1/2;
-  border-radius: 10px;
 }
 
 .seven-day-forcast {
   min-height: 650px;
   background-color: #202c3c;
   grid-column: 10/-1;
-  grid-row: 2/12;
-  border-radius: inherit;
+  grid-row: 2/13;
 }
 
 .today-forcast {
@@ -61,13 +65,13 @@
   background-color: #202c3c;
   grid-column: 2/10;
   grid-row: 4/8;
-  border-radius: inherit;
+
+  margin-bottom: 0px;
 }
 
 .air-conditions {
   min-height: 217px;
   background-color: #202c3c;
   grid-column: 2/10;
-  grid-row: 8/12;
-  border-radius: inherit;
+  grid-row: 8/13;
 }
