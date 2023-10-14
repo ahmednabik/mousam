@@ -1,3 +1,3 @@
 export default function NavigationMenu() {
-  return <div className="navigation-menu">Navigation Menu</div>;
+  return <div className="navigation-menu">Nav Menu</div>;
 }
