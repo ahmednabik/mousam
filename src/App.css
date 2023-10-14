@@ -1,0 +1,71 @@
+#root {
+  margin: 0 auto;
+  padding: 0px 2rem;
+  text-align: center;
+  color: white;
+
+  background-color: #0b131e;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  min-width: 320px;
+  height: 100vh;
+  border-radius: 10px;
+}
+
+.navigation-menu {
+  width: 84px;
+  height: 96vh;
+  margin-top: 15px;
+  background-color: blue;
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  border-radius: inherit;
+}
+
+.seven-day-forcast {
+  width: 395px;
+  height: 700px;
+  margin-left: 60px;
+  background-color: #202c3c;
+  grid-column: 9/-1;
+  grid-row: 3/-1;
+  border-radius: inherit;
+}
+
+.city-overview {
+  width: 707px;
+  height: 217px;
+  background-color: red;
+  grid-column: 2/9;
+  grid-row: 2/4;
+  border-radius: inherit;
+}
+
+.search-bar {
+  width: 708px;
+  height: 42px;
+  background-color: orange;
+  grid-column: 2/9;
+  grid-row: 1/2;
+  border-radius: 10px;
+}
+
+.today-forcast {
+  width: 707px;
+  height: 217px;
+  background-color: brown;
+  grid-column: 2/9;
+  grid-row: 4/8;
+  border-radius: inherit;
+}
+
+.air-conditions {
+  width: 707px;
+  height: 217px;
+  background-color: teal;
+  grid-column: 2/9;
+  grid-row: 8/12;
+  align-self: self-end;
+  border-radius: inherit;
+}
