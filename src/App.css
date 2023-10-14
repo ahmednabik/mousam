@@ -90,6 +90,26 @@ body {
   background-color: #202c3c;
   grid-column: 2/8;
   grid-row: 1/2;
+  display: flex;
+  align-items: center;
+}
+.search-bar > form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+
+.search-bar > form > input {
+  flex: 1;
+  border: none; /* Remove border */
+  outline: none; /* Remove focus outline */
+  background: transparent; /* Make the input background transparent */
+  width: 100%; /* Make the input width 100% of its container */
+  box-sizing: border-box; /* Include padding and border in the width */
+  color: white;
+  padding-left: 20px;
 }
 
 .seven-day-forcast {
