@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getWeatherData } from "./utils";
+import { getWeatherData, getBackgroundClass } from "./utils";
 
 export default function CityOverview({ city, apiKey }) {
   const [weather, setWeather] = useState(null);
@@ -9,8 +9,12 @@ export default function CityOverview({ city, apiKey }) {
     getWeatherData(currentWeatherURL, setWeather);
   }, [city]);
 
+  const className =
+    weather &&
+    getBackgroundClass(weather.current.condition.code, weather.current.is_day);
+
   return (
-    <div className="city-overview">
+    <div className={className || "city-overview"}>
       <h2>{weather && weather.location.name}</h2>
       {weather && (
         <>

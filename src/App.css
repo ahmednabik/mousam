@@ -319,3 +319,34 @@ body {
 sup {
   font-size: 12px;
 }
+
+.rain {
+  background-image: url(./assets/rain-bg.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.snow {
+  background-image: url(./assets/snow.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clear {
+  background-image: url(./assets/clear.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sunny {
+  background-image: url(./assets/sunny.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+}
+.cloudy {
+  background-image: url(./assets/cloudy.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+}
