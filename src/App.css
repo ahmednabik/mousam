@@ -10,13 +10,14 @@
   grid-template-rows: repeat(12, 1fr);
   min-width: 320px;
   height: 100vh;
+  color: #d7d7d7;
 }
 
 body {
   background-color: #0b131e;
 }
 
-.navigation-menu {
+.side-bar {
   min-width: 84px;
   margin-top: 15px;
   background-color: #202c3c;
@@ -26,6 +27,43 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 15px;
+  display: flex;
+  gap: 100px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 35px;
+  flex-direction: column;
+}
+
+.logo {
+  background-color: #8ebbf742;
+  margin-top: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 10%;
+  display: grid;
+  place-items: center;
+}
+
+.side-bar h3 {
+  color: #87919d;
+  margin-top: 0px;
+  font-size: 16px;
+}
+
+.side-bar * {
+  cursor: pointer;
+}
+
+.nav-weather:hover,
+.nav-cities:hover,
+.nav-maps:hover,
+.nav-settings:hover {
+  transform: scale(1.05);
 }
 
 .city-overview,
@@ -117,6 +155,51 @@ body {
   background-color: #202c3c;
   grid-column: 10/-1;
   grid-row: 2/13;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.seven-day-heading {
+  color: #87919d;
+  text-transform: uppercase;
+  font-size: 16px;
+  align-self: flex-start;
+  padding-left: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.daily-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 1fr;
+  place-items: center;
+  border-bottom: 1px solid #a6b1c0;
+  margin: 0px 10px;
+}
+
+.daily-card:last-child {
+  border-bottom: none;
+}
+
+.daily-day {
+  color: #87919d;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.daily-condition {
+  font-size: 14px;
+  text-align: left;
+  justify-self: left;
+  padding-left: 5px;
+}
+
+.daily-temperature {
+  font-size: 14px;
+  text-align: left;
+  justify-self: left;
+  color: #d7d7d7;
 }
 
 .today-forcast {
@@ -124,8 +207,43 @@ body {
   background-color: #202c3c;
   grid-column: 2/10;
   grid-row: 4/8;
-
   margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+}
+.todays-forcast-heading {
+  color: #87919d;
+  text-transform: uppercase;
+  align-self: flex-start;
+  padding-left: 20px;
+  margin: 18px 0px;
+}
+
+.today-forcast > .wrapper {
+  display: grid;
+  grid-template-areas: "6 9 12 15 18 21";
+  grid-template-columns: repeat (6, auto);
+  grid-template-rows: auto;
+}
+.hourly-card {
+  border-right: 1px solid #87919d;
+}
+
+.hourly-card:last-child {
+  border-right: none;
+}
+
+.hourly-card > * {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.time-slots {
+  color: #87919d;
+}
+
+.hourly-temperature {
+  color: #d7d7d7;
 }
 
 .air-conditions {
@@ -133,4 +251,71 @@ body {
   background-color: #202c3c;
   grid-column: 2/10;
   grid-row: 8/13;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.air-conditions-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  display: relative;
+  grid-row-gap: 20px;
+}
+
+.air-condition-card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0px 25px;
+}
+
+.air-condition-card p {
+  margin: 5px;
+  color: #87919d;
+  font-weight: 600;
+}
+.air-condition-card > h3 {
+  margin-top: -5px;
+  margin-bottom: 0px;
+  margin-left: 42px;
+  font-size: 32px;
+}
+
+.air-conditions-heading {
+  color: #87919d;
+  text-transform: uppercase;
+  font-size: 16px;
+  align-self: flex-start;
+  padding-left: 20px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+.air-condition-card-icon {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.see-more {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  padding: 3px 6px;
+  background-color: #0596ff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 12px;
+  color: white;
+}
+
+.city-overview sup {
+  font-size: 24px;
+}
+
+sup {
+  font-size: 12px;
 }

@@ -4,10 +4,10 @@ import SevenDayForcast from "./components/SevenDayForcast";
 import TodayForcast from "./components/TodayForcast";
 import AirConditions from "./components/AirConditions";
 import NavigationMenu from "./components/NavigationMenu";
+const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 import "./App.css";
 import { useState } from "react";
 function App() {
-  const apiKey = "1203fc1dd3e14089934135308230510";
   const [city, setCity] = useState("Lahore");
   function updateParentState(newCity) {
     console.log(newCity);
@@ -19,10 +19,10 @@ function App() {
     <>
       <SearchBar updateParentState={updateParentState} />
       <CityOverview city={city} apiKey={apiKey} />
-      <SevenDayForcast city={city} />
-      <TodayForcast city={city} />
-      <AirConditions city={city} />
-      <NavigationMenu city={city} />
+      <SevenDayForcast city={city} apiKey={apiKey} />
+      <TodayForcast city={city} apiKey={apiKey} />
+      <AirConditions city={city} apiKey={apiKey} />
+      <NavigationMenu city={city} apiKey={apiKey} />
     </>
   );
 }

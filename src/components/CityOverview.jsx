@@ -1,25 +1,12 @@
 import { useState, useEffect } from "react";
+import { getWeatherData } from "./utils";
 
 export default function CityOverview({ city, apiKey }) {
   const [weather, setWeather] = useState(null);
-
-  async function getCurrentWeather() {
-    let currentWeatherURL = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
-    try {
-      const response = await fetch(currentWeatherURL);
-      if (response.ok) {
-        const currentWeatherData = await response.json();
-        setWeather(currentWeatherData);
-      } else {
-        console.error("Failed to fetch weather data");
-      }
-    } catch (error) {
-      console.error("Error fetching weather data:", error); //handle error like a real man
-    }
-  }
+  const currentWeatherURL = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
   useEffect(() => {
-    getCurrentWeather();
+    getWeatherData(currentWeatherURL, setWeather);
   }, [city]);
 
   return (
@@ -28,7 +15,10 @@ export default function CityOverview({ city, apiKey }) {
       {weather && (
         <>
           <p>{weather.location.country}</p>
-          <h1>{weather.current.temp_c}°C</h1>
+          <h1>
+            {Math.round(weather.current.temp_c)}
+            <sup>°C</sup>
+          </h1>
           <img
             src={weather.current.condition.icon}
             alt={weather.current.condition.text}
