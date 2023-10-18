@@ -1,22 +1,3 @@
-// export default function SearchBar({ updateParentState }) {
-//   function handleCitySearch(newCity) {
-//     updateParentState(newCity);
-//   }
-//   return (
-//     <div className="search-bar">
-//       <form
-//         action="submit"
-//         onSubmit={(e) => {
-//           e.preventDefault();
-//           handleCitySearch(e.target.value);
-//         }}
-//       >
-//         <input type="text" />
-//       </form>
-//     </div>
-//   );
-// }
-
 import { useState } from "react";
 export default function SearchBar({ updateParentState }) {
   const [newCity, setNewCity] = useState("Lahore"); // Add state for the input field

@@ -8,7 +8,7 @@ const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 import "./App.css";
 import { useState } from "react";
 function App() {
-  const [city, setCity] = useState("Lahore");
+  const [city, setCity] = useState("Dubai");
   function updateParentState(newCity) {
     console.log(newCity);
     setCity(newCity);
