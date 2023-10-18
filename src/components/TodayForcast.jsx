@@ -3,7 +3,8 @@ import { getWeatherData } from "./utils";
 import HourlyCard from "./HourlyCard";
 export default function TodayForcast({ city, apiKey }) {
   const [weatherData, setWeatherData] = useState(null);
-  const forecastURL = `https://cors-anywhere.herokuapp.com/http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`;
+  //https://cors-anywhere.herokuapp.com/
+  const forecastURL = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`;
   useEffect(() => {
     getWeatherData(forecastURL, setWeatherData);
   }, [city]);
