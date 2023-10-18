@@ -18,8 +18,9 @@ export default function CityOverview({ city, apiKey }) {
       <h2>{weather && weather.location.name}</h2>
       {weather && (
         <>
-          <p>{weather.location.country}</p>
-          <p>{weather.location.localtime}</p>
+          <p>
+            {weather.location.country} ({weather.location.localtime})
+          </p>
           <h1>
             {Math.round(weather.current.temp_c)}
             <sup>°C</sup>
