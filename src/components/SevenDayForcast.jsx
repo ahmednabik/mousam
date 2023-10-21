@@ -8,7 +8,7 @@ export default function SevenDayForcast({ city, apiKey }) {
   useEffect(() => {
     getWeatherData(forecastURL, setWeatherData);
   }, [city]);
-  const daysArray = [0, 1, 2, 3, 4, 5, 6];
+  const daysArray = [0, 1, 2];
   return (
     <div className="seven-day-forcast">
       <h4 className="seven-day-heading">7 Day Forecast</h4>
