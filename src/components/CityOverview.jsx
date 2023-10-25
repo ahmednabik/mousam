@@ -3,15 +3,23 @@ import { getWeatherData, getBackgroundClass } from "./utils";
 
 export default function CityOverview({ city, apiKey }) {
   const [weather, setWeather] = useState(null);
+  const [loading, setLoading] = useState(true);
   const currentWeatherURL = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
   useEffect(() => {
-    getWeatherData(currentWeatherURL, setWeather);
+    getWeatherData(currentWeatherURL, setWeather, setLoading);
   }, [city]);
 
   const className =
     weather &&
     getBackgroundClass(weather.current.condition.code, weather.current.is_day);
+
+  if (loading)
+    return (
+      <div className={className || "city-overview"}>
+        <h2>Loading....</h2>
+      </div>
+    );
 
   return (
     <div className={className || "city-overview"}>

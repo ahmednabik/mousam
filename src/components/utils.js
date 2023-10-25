@@ -1,3 +1,4 @@
+import { useState } from "react";
 export function getDate() {
   const date = new Date();
   let currentDay = String(date.getDate()).padStart(2, "0");
@@ -30,7 +31,7 @@ export function getDay(date) {
   }
 }
 
-export async function getWeatherData(url, setWeatherData) {
+export async function getWeatherData(url, setWeatherData, setLoading) {
   try {
     const response = await fetch(url);
     if (response.ok) {
@@ -41,6 +42,8 @@ export async function getWeatherData(url, setWeatherData) {
     }
   } catch (error) {
     console.log("7 Day forecast data error: " + error);
+  } finally {
+    setLoading(false);
   }
 }
 
