@@ -3,7 +3,6 @@ import { getWeatherData } from "./utils";
 import DailyCard from "./DailyCard";
 export default function SevenDayForcast({ city, apiKey }) {
   const [weatherData, setWeatherData] = useState(null);
-  //https://cors-anywhere.herokuapp.com/
   const forecastURL = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=no&alerts=no`;
   useEffect(() => {
     getWeatherData(forecastURL, setWeatherData);
@@ -12,11 +11,11 @@ export default function SevenDayForcast({ city, apiKey }) {
   return (
     <div className="seven-day-forcast">
       <h4 className="seven-day-heading">7 Day Forecast</h4>
-      {daysArray.map((day) => {
+      {daysArray.map((day, index) => {
         return (
           <>
             <DailyCard
-              key={day}
+              key={index}
               date={weatherData && weatherData.forecast.forecastday[day].date}
               icon={
                 weatherData &&
