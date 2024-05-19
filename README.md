@@ -1,6 +1,6 @@
 # Mousam - Weather App
 
-This project is part of my self learning Javascript/React path.
+This project is part of my self-learning Javascript/React path.
 
 Current features:
 
@@ -11,7 +11,7 @@ Current features:
 Planned Features:
 
 1. Make the app layout optimized for smaller screens.
-2. Implement favourite cities feature
-3. Implement map overlays for locations using opensource layer solutions.
+2. Implement favorite cities feature
+3. Implement map overlays for locations using open-source layer solutions.
 
-app is accessable at https://mousamapp.vercel.app/
+app is accessible at https://mousamapp.vercel.app/
