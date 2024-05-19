@@ -13,3 +13,5 @@ Planned Features:
 1. Make the app layout optimized for smaller screens.
 2. Implement favourite cities feature
 3. Implement map overlays for locations using opensource layer solutions.
+
+app is accessable at https://mousamapp.vercel.app/
